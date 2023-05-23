@@ -157,7 +157,7 @@ module.exports = class NodeCache extends EventEmitter
 	#
 	#	myCache.set "myKey", "my_String Value", 10
 	#
-	set: ( key, value, ttl )=>
+	set: ( key, value, ttl, should_call_callbacks=true )=>
 		# check if cache is overflowing
 		if (@options.maxKeys > -1 && @stats.keys >= @options.maxKeys)
 			_err = @_error( "ECACHEFULL" )
@@ -192,7 +192,8 @@ module.exports = class NodeCache extends EventEmitter
 			@stats.ksize += @_getKeyLength( key )
 			@stats.keys++
 
-		@emit( "set", key, value )
+		if should_call_callbacks
+			@emit( "set", key, value )
 
 		# return true
 		return true
@@ -268,7 +269,7 @@ module.exports = class NodeCache extends EventEmitter
 
 		for keyValuePair in keyValueSet
 			{ key, val, ttl } = keyValuePair
-			@set(key, val, ttl)
+			@set(key, val, ttl, false)
 		return true
 
 	# ## del

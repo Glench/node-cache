@@ -14,9 +14,7 @@ config.json
 config*.json
 deploy.json
 /node_modules
-/index.js
 /test/*.js
-/lib/*.js
 *.log
 
 coverage/
