@@ -1,3 +1,5 @@
+Note: this fork adds a non-standard option that the `mset` function does not trigger any `on('set')` callbacks.
+
 ![Logo](./logo/logo.png)
 
 [![Node.js CI](https://github.com/node-cache/node-cache/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/node-cache/node-cache/actions?query=workflow%3A%22Node.js+CI%22+branch%3A%22master%22)
