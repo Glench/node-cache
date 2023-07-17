@@ -74,12 +74,12 @@ declare namespace NodeCache {
 		/**
 		 * remove keys
 		 * @param keys cache key to delete or a array of cache keys
-		 * @param cb Callback function
+		 * @param should_call_callbacks If this should trigger .on('del') callbacks 
 		 * @returns Number of deleted keys
 		 */
 		del(
 			keys: Key | Key[],
-			cb?: Callback<number>
+			should_call_callbacks?: boolean
 		): number;
 
 		/**
@@ -319,11 +319,12 @@ declare class NodeCache extends events.EventEmitter {
 	/**
 	 * remove keys
 	 * @param keys cache key to delete or a array of cache keys
-	 * @param cb Callback function
+	 * @param should_call_callbacks If this should trigger .on('del') callbacks 
 	 * @returns Number of deleted keys
 	 */
 	del(
-		keys: Key | Key[]
+		keys: Key | Key[],
+		should_call_callbacks?: boolean
 	): number;
 
 	/**
