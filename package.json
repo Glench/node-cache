@@ -25,18 +25,13 @@
     "memcached",
     "object"
   ],
-  "version": "5.2.3",
-  "author": "mpneuried <mp@tcs.de>",
+  "version": "5.2.1",
+  "author": " <mp@tcs.de>",
   "maintainers": [
     {
-      "name": "M. Peter",
-      "email": "mp@tcs.de",
-      "url": "https://github.com/mpneuried"
-    },
-    {
-      "name": "Joshy",
-      "email": "erdiicodes@gmail.com",
-      "url": "https://erdii.engineering/"
+      "name": "Glen Chiacchieri",
+      "email": "hello@glench.com",
+      "url": "https://github.com/Glench"
     }
   ],
   "main": "./index.js",
