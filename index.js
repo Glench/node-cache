@@ -1,5 +1,5 @@
 /*
- * node-cache 5.1.2 ( 2023-05-23 )
+ * node-cache 5.2.3 ( 2023-07-17 )
  * https://github.com/node-cache/node-cache
  *
  * Released under the MIT license
@@ -12,6 +12,6 @@
 
   exports = module.exports = require('./lib/node_cache');
 
-  exports.version = '5.1.2';
+  exports.version = '5.2.3';
 
 }).call(this);

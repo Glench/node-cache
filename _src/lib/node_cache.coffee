@@ -288,7 +288,7 @@ module.exports = class NodeCache extends EventEmitter
 	#
 	#	myCache.del( "myKey" )
 	#
-	del: ( keys )=>
+	del: ( keys, should_call_callbacks=true )=>
 		# convert keys to an array of itself
 		if not Array.isArray( keys )
 			keys = [ keys ]
@@ -309,7 +309,8 @@ module.exports = class NodeCache extends EventEmitter
 				oldVal = @data[ key ]
 				delete @data[ key ]
 				# return true
-				@emit( "del", key, oldVal.v )
+				if should_call_callbacks
+					@emit( "del", key, oldVal.v )
 
 
 		return delCount

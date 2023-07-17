@@ -1,4 +1,4 @@
-Note: this fork adds a non-standard option that the `mset` function does not trigger any `on('set')` callbacks.
+Note: this fork adds a non-standard option that the `mset` function does not trigger any `on('set')` callbacks. It does this by adding an optional `should_call_callbacks` parameter to `cache.set()`. Also added the same option to `del()`.
 
 ![Logo](./logo/logo.png)
 
